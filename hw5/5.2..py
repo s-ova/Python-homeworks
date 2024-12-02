@@ -20,7 +20,7 @@ while True:
     else:
         print("Invalid operation!")
     continue_calculation = input(
-         "Do you want to perform another calculation? (yes/y to continue): ")
+         "Do you want to perform another calculation? (yes/y to continue): ").lower()
     if continue_calculation not in ["yes", "y"]:
             print("Until next time!")
             break
