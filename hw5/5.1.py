@@ -1,6 +1,5 @@
 import string
 import keyword
-
 def is_valid_variable(name):
     if name in keyword.kwlist:
         return False
