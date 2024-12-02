@@ -14,7 +14,7 @@ def is_valid_variable(name):
         return False
     return True
 while True:
-    user_input = input("Enter a string to check if it can be a variable name (or 'exit' to quit): ").strip()
+    user_input = input("Enter a string to check if it can be a variable name (or 'exit' to quit): ")
     if user_input.lower() == "exit":
         print("Good Luck!")
         break
