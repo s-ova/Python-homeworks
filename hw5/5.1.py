@@ -1,7 +1,7 @@
 import string
 import keyword
 while True:
-    name = input("Enter a string to check if it can be a variable name (or 'exit' to quit): ").strip()
+    name = input("Enter a string to check if it can be a variable name (or 'exit' to quit): ")
     if name.lower() == "exit":
         print("Good Luck!")
         break
