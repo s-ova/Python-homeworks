@@ -1,7 +1,7 @@
 import string
 import keyword
 while True:
-    name = input("Enter a string to check if it can be a variable name (or 'exit' to quit): ")
+    name = input("Enter a variable name (or 'exit' to quit): ")
     if name.lower() == "exit":
         print("Good Luck!")
         break
@@ -17,7 +17,10 @@ while True:
     if any(char in string.punctuation.replace("_", "") for char in name):
         print(False)
         continue
-    if name.count("__") > 0 or name.count("__") > 1  :
+    if name.count("__") > 0:
+        print(False)
+        continue
+    if " " in name:
         print(False)
         continue
     print(True)
