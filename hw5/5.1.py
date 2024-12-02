@@ -17,7 +17,7 @@ while True:
     if any(char in string.punctuation.replace("_", "") for char in name):
         print(False)
         continue
-    if name.count("__") > 1 :
+    if name.count("__") > 0 or name.count("__") > 1  :
         print(False)
         continue
     print(True)
