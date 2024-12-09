@@ -1,9 +1,16 @@
-def correct_sentence(sentence1, sentence2):
-    sentences = [sentence1, sentence2]
+def correct_sentence(sentence):
+    sentences = sentence.split('. ')
     corrected_sentences = []
-    for sentence in sentences:
-        if not sentence.endswith("."):
-            sentence += "."
-        corrected_sentences.append(sentence.capitalize())
-    return " ".join(corrected_sentences)
-print(correct_sentence("please note that not all fixes are necessary", "If the sentence AlreaDy ends with a full stop, you don't Need to adD another one, IT would be a mistake."))
+    for s in sentences:
+        s = s.strip()  
+        if s:
+            if not s.endswith('.'):
+                s += '.'
+            corrected_sentences.append(s.capitalize())
+    return ' '.join(corrected_sentences)
+assert correct_sentence("greetings, friends") == "Greetings, friends.", 'Test1'
+assert correct_sentence("hello") == "Hello.", 'Test2'
+assert correct_sentence("Greetings. Friends") == "Greetings. Friends.", 'Test3'
+assert correct_sentence("Greetings, friends.") == "Greetings, friends.", 'Test4'
+assert correct_sentence("greetings, friends.") == "Greetings, friends.", 'Test5'
+print('ОК')
