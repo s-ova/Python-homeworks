@@ -42,7 +42,6 @@ class Group:
         all_students = "\n".join(str(student) for student in self.group)
         return f"Group Number: {self.number}\nStudents:\n{all_students}"
 
-
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
 
